@@ -10,7 +10,7 @@ class Agent(object):
         self.action_space = gym.spaces.Box(-1.0, 1.0, (21,), np.float64)
 
         self.policy = PNetwork(67, self.action_space)
-        self.load("save_q3_1200.bin")
+        self.load("save_q3_1300.bin")
 
     def act(self, observation):
         obs = torch.FloatTensor(observation).to("cpu").unsqueeze(0)
